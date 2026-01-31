@@ -9,3 +9,12 @@ class PageTableEntry {
         this.frameNumber = -1;
     }
 }
+class SegmentTableEntry {
+    int base;
+    int limit;
+
+    public SegmentTableEntry(int base, int limit) {
+        this.base = base;
+        this.limit = limit;
+    }
+}
