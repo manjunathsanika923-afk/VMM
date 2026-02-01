@@ -17,4 +17,7 @@ class SegmentTableEntry {
         this.base = base;
         this.limit = limit;
     }
+interface PageReplacement {
+    int replacePage(List<Integer> memory, int page);
+}
 }
