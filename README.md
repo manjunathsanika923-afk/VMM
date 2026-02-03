@@ -21,3 +21,11 @@ interface PageReplacement {
     int replacePage(List<Integer> memory, int page);
 }
 }
+Class FIFO implements PageReplacement {
+    Queue<Integer> queue = new LinkedList<>();
+
+    public int replacePage(List<Integer> memory, int page) {
+        int victim = queue.poll();
+        queue.offer(page);
+        return memory.indexOf(victim);
+    }
