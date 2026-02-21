@@ -29,3 +29,7 @@ Class FIFO implements PageReplacement {
         queue.offer(page);
         return memory.indexOf(victim);
     }
+public void addPage(int page) {
+        queue.offer(page);
+    }
+}
