@@ -33,3 +33,5 @@ public void addPage(int page) {
         queue.offer(page);
     }
 }
+class LRU implements PageReplacement {
+    LinkedList<Integer> lruList = new LinkedList<>();
