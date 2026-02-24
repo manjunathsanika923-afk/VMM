@@ -35,3 +35,7 @@ public void addPage(int page) {
 }
 class LRU implements PageReplacement {
     LinkedList<Integer> lruList = new LinkedList<>();
+public void accessPage(int page) {
+        lruList.remove((Integer) page);
+        lruList.addFirst(page);
+    }
