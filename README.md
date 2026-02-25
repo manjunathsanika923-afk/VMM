@@ -39,3 +39,5 @@ public void accessPage(int page) {
         lruList.remove((Integer) page);
         lruList.addFirst(page);
     }
+public int replacePage(List<Integer> memory, int page) {
+        int victim = lruList.removeLast();
