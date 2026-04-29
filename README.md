@@ -41,3 +41,8 @@ public void accessPage(int page) {
     }
 public int replacePage(List<Integer> memory, int page) {
         int victim = lruList.removeLast();
+         int frame = memory.indexOf(victim);
+        lruList.addFirst(page);
+        return frame;
+    }
+}
