@@ -46,3 +46,6 @@ public int replacePage(List<Integer> memory, int page) {
         return frame;
     }
 }
+class VirtualMemoryManager {
+    PageTableEntry[] pageTable;
+Map<Integer, SegmentTableEntry> segmentTable;
