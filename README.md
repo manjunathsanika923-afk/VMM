@@ -48,4 +48,7 @@ public int replacePage(List<Integer> memory, int page) {
 }
 class VirtualMemoryManager {
     PageTableEntry[] pageTable;
-Map<Integer, SegmentTableEntry> segmentTable;
+Map<Integer, SegmentTableEntry> segmentTable; List<Integer> physicalMemory;
+    PageReplacement replacementPolicy;
+    int nextFrame = 0;
+    int frameCount;
