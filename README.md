@@ -52,3 +52,9 @@ Map<Integer, SegmentTableEntry> segmentTable; List<Integer> physicalMemory;
     PageReplacement replacementPolicy;
     int nextFrame = 0;
     int frameCount;
+    public VirtualMemoryManager(int numPages, int numFrames, PageReplacement policy) {
+        pageTable = new PageTableEntry[numPages];
+        for (int i = 0; i < numPages; i++) {
+            pageTable[i] = new PageTableEntry();
+        }
+
