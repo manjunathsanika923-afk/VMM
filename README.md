@@ -57,4 +57,11 @@ Map<Integer, SegmentTableEntry> segmentTable; List<Integer> physicalMemory;
         for (int i = 0; i < numPages; i++) {
             pageTable[i] = new PageTableEntry();
         }
+         segmentTable = new HashMap<>();
+        physicalMemory = new ArrayList<>(Collections.nCopies(numFrames, -1));
+        replacementPolicy = policy;
+        frameCount = numFrames;
+    }
+
+
 
